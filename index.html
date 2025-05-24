@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carpooling Service</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #000719;
+    }
+
+    .navbar {
+      background: #350a72;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      color: aliceblue;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+    }
+
+    .navbar a:hover {
+      background: #f05d5d;
+      transition: background 0.3s ease;
+    }
+
+    .container {
+      padding-top: 80px;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 40px 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(241, 234, 234, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .section:nth-child(even) {
+      background-color: #9ca5f0;
+    }
+
+    .section:nth-child(odd) {
+      background-color: #e7efff;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      color: #1d3b73;
+    }
+
+    .hero {
+      background-color: #768bc8;
+      color: white;
+      text-align: center;
+      padding: 80px 20px 40px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+      padding: 10px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .search-bar input {
+      width: 160px;
+    }
+
+    .search-bar button {
+      background-color: #1d3b73;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #3a5abf;
+      transform: scale(1.05);
+    }
+
+    .about-section {
+      background-color: #c8c4f5;
+      border-left: 5px solid #2e59d9;
+      padding: 40px 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .about-section:hover {
+      transform: scale(1.01);
+    }
+
+    .about-section h2 {
+      color: #2e59d9;
+    }
+
+    .about-section p {
+      font-size: 1.05em;
+      line-height: 1.6em;
+    }
+
+    .footer {
+      background: #9a64e1;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 60px;
+    }
+
+    .footer h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <h1>co ride</h1>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#login">Login</a>
+    <a href="#signup">Sign Up</a>
+  </div>
+
+  <div class="hero">
+    <h2>Smarter Rides, Together</h2>
+    <p>Join our carpooling community and enjoy affordable, safe, and eco-friendly travel options.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Enter your location" />
+      <input type="text" placeholder="Enter destination" />
+      <input type="time" />
+      <button>Search</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="home" class="section">
+      <h2>Find Your Ride</h2>
+      <p>Quickly search and match with verified carpoolers in your area.</p>
+    </section>
+
+    <section id="driver-details" class="section">
+      <h2>Driver Details</h2>
+      <p>Find trusted drivers with verified profiles and ratings.</p>
+    </section>
+
+    <section id="partner-details" class="section">
+      <h2>Partner Details</h2>
+      <p>Become a carpooling partner and share your ride to earn.</p>
+    </section>
+
+    <section class="section">
+      <h2>Recent Activity</h2>
+      <p>See recent rides and user reviews.</p>
+    </section>
+
+    <section class="section">
+      <h2>Premium Membership</h2>
+      <p>Get premium features like priority matching and safety support.</p>
+    </section>
+
+    <section class="section">
+      <h2>Traffic Area Protection & Safety</h2>
+      <p>Stay updated on traffic congestion and ensure safety with our verified routes.</p>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About CoRide</h2>
+      <p>
+        CoRide is a community-driven carpooling platform designed to reduce travel costs, ease traffic congestion,
+        and promote sustainable commuting. Our mission is to connect riders and drivers securely and efficiently using
+        smart matching algorithms.
+      </p>
+    </section>
+  </div>
+
+  <div class="footer">
+    <h3>Contact Us</h3>
+    <p>Email: support@coride.com</p>
+    <p>Phone: +1 (800) 123-4567</p>
+    <p>&copy; 2025 CoRide. All rights reserved.</p>
+  </div>
+</body>
+
+</html>
