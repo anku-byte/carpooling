@@ -1,0 +1,207 @@
+:root {
+  --primary: #350a72;
+  --accent: #f05d5d;
+  --bg-dark: #000719;
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top right, #1a1a2e, #000719);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navbar Upgrades */
+.navbar {
+  background: rgba(53, 10, 114, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Centralized Container */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px; /* Space for fixed navbar */
+  padding-bottom: 60px;
+}
+
+/* Glassmorphism Card for Signup */
+.auth-card {
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Modern Inputs */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: var(--accent);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Button Pulse Effect */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #4a0ea3;
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* This pushes the footer to the bottom */
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.page-layout {
+  width: 100%;
+  padding-top: 100px;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  min-width: 220px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
